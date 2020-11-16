@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyMoveUp : MonoBehaviour
+public class enemyMoveSide : MonoBehaviour
 {
     Rigidbody2D rb;
     int speed;
     void Start()
     {
-        speed = -5;
+        rb = GetComponent<Rigidbody2D>();
+        speed = -10;
     }
 
     // Update is called once per frame

@@ -8,7 +8,8 @@ public class enemyMoveUp : MonoBehaviour
     int speed;
     void Start()
     {
-        speed = -5;
+        rb = GetComponent<Rigidbody2D>();
+        speed = -10;
     }
 
     // Update is called once per frame
