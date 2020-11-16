@@ -2,29 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemyMoveSide : MonoBehaviour
+public class enemyMoveUp : MonoBehaviour
 {
-    int timer;
     Rigidbody2D rb;
+    int speed;
     void Start()
     {
-        timer = 0;
-        rb = GetComponent<Rigidbody2D>();
+        speed = -5;
     }
-    int speed;
+
     // Update is called once per frame
     void Update()
     {
-        timer++;
-        if (timer == 600)
-        {
-            timer = 0;
-            rb.velocity = new Vector2(10, 0);
-        }
-        if (timer == 300)
-        {
-            rb.velocity = new Vector2(-10, 0);
-        }
+        rb.velocity = new Vector2(speed, 0);
     }
     void OnTriggerEnter2D(Collider2D col)
     {
