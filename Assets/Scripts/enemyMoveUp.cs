@@ -20,7 +20,6 @@ public class enemyMoveUp : MonoBehaviour
         {
             timer = 0;
             rb.velocity = new Vector2(0, 10);
-            Debug.Log(timer);
         }
         if (timer == 300)
         {

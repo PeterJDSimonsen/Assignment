@@ -35,6 +35,21 @@ public class movePlayer : MonoBehaviour
         {
             yVelocity = speed2;
         }
-            rb.velocity = new Vector2( xVelocity, yVelocity );
+        rb.velocity = new Vector2(xVelocity, yVelocity);
+    }
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Enemy")
+        {
+            transform.position = new Vector2(40, 33);
+        }
+        if (col.gameObject.tag == "Wall")
+        {
+            rb.velocity = new Vector2(0, 0);
+        }
+        if (col.gameObject.tag == "Finish")
+        {
+            transform.position = new Vector2(-60, -80);
+        }
     }
 }

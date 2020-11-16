@@ -95,8 +95,8 @@ GameObject:
   - component: {fileID: 4826190482359129426}
   - component: {fileID: 2863222957058778069}
   m_Layer: 0
-  m_Name: Small Horizontal Wall
-  m_TagString: Untagged
+  m_Name: Small Vertical Wall
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

@@ -11,7 +11,7 @@ public class enemyMoveSide : MonoBehaviour
         timer = 0;
         rb = GetComponent<Rigidbody2D>();
     }
-
+    int speed;
     // Update is called once per frame
     void Update()
     {
@@ -20,11 +20,17 @@ public class enemyMoveSide : MonoBehaviour
         {
             timer = 0;
             rb.velocity = new Vector2(10, 0);
-            Debug.Log(timer);
         }
         if (timer == 300)
         {
             rb.velocity = new Vector2(-10, 0);
+        }
+    }
+    void OnTriggerEnter2D(Collider2D col)
+    {
+        if (col.gameObject.tag == "Wall")
+        {
+            speed = -speed;
         }
     }
 }
